@@ -17,6 +17,9 @@ const ToursPage = async () => {
   return (
     <div>
       <h1 className="text-5xl font bold">ToursPage</h1>
+      {data.map(item=>(
+        <h2 key={item.id}>{item.name}</h2>
+      ))}
     </div>
   )
 }
