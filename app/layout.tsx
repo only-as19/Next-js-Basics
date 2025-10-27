@@ -21,7 +21,9 @@ export default function RootLayout({
     <html lang='en'>
       <body className={roboto.className}>
         <Navbar/>
-        {children}
+        <main className='max-w-3xl mx-auto py-10'>
+          {children}
+        </main>
       </body>
     </html>
   );
