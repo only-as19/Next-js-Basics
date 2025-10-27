@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 type Tours = {
     id: string;
@@ -22,7 +23,9 @@ const ToursPage = async () => {
     <div>
       <h1 className="text-5xl font bold">ToursPage</h1>
       {data.map(item=>(
-        <h2 key={item.id}>{item.name}</h2>
+        <Link key={item.id} href={`tours/${item.id}`}>
+        <h2 >{item.name}</h2>
+        </Link>
       ))}
     </div>
   )
