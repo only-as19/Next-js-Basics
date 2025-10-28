@@ -398,12 +398,12 @@ export default ToursLayout;
 - app/tours/[id]/page.tsx
 
 ```js
-const page = ({ params }: { params: { id: string } }) => {
-  console.log(params);
+const page = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
 
   return (
     <div>
-      <h1 className='text-4xl'>ID : {params.id}</h1>
+      <h1 className='text-4xl'>ID : {id}</h1>
     </div>
   );
 };
